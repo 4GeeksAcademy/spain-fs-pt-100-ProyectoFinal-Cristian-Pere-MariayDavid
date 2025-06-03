@@ -266,7 +266,7 @@ class Event(db.Model):
 class EventSignup(db.Model):
     __tablename__ = 'event_signups'
     id: Mapped[int]= mapped_column(Integer, primary_key=True)
-    event_id: Mapped[int]= mapped_column(Integer, ForeignKey('events.id'), nullable=False)
+    event_id: Mapped[int]= mapped_column(Integer, ForeignKey('events.id'), nullable=False) 
     user_id: Mapped[int]= mapped_column(Integer, ForeignKey('users.id'), nullable=False)
     fecha_incripcion: Mapped[datetime]= mapped_column(DateTime, default=datetime.utcnow, nullable=False)
     estado: Mapped[str]= mapped_column(String(30))
