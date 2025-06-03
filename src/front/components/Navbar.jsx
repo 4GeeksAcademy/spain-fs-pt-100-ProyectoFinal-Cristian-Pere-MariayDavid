@@ -44,22 +44,23 @@ export const Navbar = () => {
         DMPC<span className="logo-highlight">ProFit</span>
       </>
     ),
-    url: "https://ubiquitous-disco-r4pjvwprwv4rhwjjj-3000.app.github.dev/",
+    url: "https://special-space-winner-4jwx96wg66vpfj955-3000.app.github.dev/",
   };
 
   const menuItems = [
-    { name: "Sobre Nosotros", link: "#" },
+    { name: "Sobre Nosotros", 
+      link: "https://special-space-winner-4jwx96wg66vpfj955-3000.app.github.dev/aboutus" },
     {
       name: "Nutricion",
-      link: "https://ubiquitous-disco-r4pjvwprwv4rhwjjj-3000.app.github.dev/nutricion",
+      link: "https://special-space-winner-4jwx96wg66vpfj955-3000.app.github.dev/nutricion",
     },
     {
       name: "Deporte",
-      link: "https://ubiquitous-disco-r4pjvwprwv4rhwjjj-3000.app.github.dev/sport",
+      link: "https://special-space-winner-4jwx96wg66vpfj955-3000.app.github.dev/sport",
     },
     {
       name: "Profesional",
-      link: "https://ubiquitous-disco-r4pjvwprwv4rhwjjj-3000.app.github.dev/entrenadores",
+      link: "https://special-space-winner-4jwx96wg66vpfj955-3000.app.github.dev/entrenadores",
     },
     { name: "Loging", link: "#" },
   ];

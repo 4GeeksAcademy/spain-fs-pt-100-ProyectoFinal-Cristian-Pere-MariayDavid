@@ -5,8 +5,8 @@ from flask import Flask, request, jsonify, url_for, Blueprint, abort
 from api.models import User, AuthAccount, PlanTemplate, TemplateItem, SubscriptionPlan,Subscription, Payment, Event, EventSignup, SupportTicket
 from api.utils import  APIException
 from flask_cors import CORS
-from extensions import db
-
+from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
+from werkzeug.security import generate_password_hash, check_password_hash
 
 api = Blueprint('api', __name__)
 

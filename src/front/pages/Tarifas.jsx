@@ -49,8 +49,17 @@ const Tarifas = () => {
                 ))}
             </div>
 
-            {/* Detalle de la tarifa seleccionada */}
-            {eleccionSeleccionada && (
+            {/* Mostrar imagen por defecto o detalle según selección */}
+            {!eleccionSeleccionada ? (
+                <div className="detalle-direccion">
+                    <h2>Selecciona una tarifa para ver los detalles</h2>
+                    <img
+                        src="parque.jpg"
+                        alt="Imagen por defecto"
+                        className="default"
+                    />
+                </div>
+            ) : (
                 <div className="detalle-opciones">
                     <h2>{eleccionSeleccionada.nombre}</h2>
 
@@ -71,6 +80,4 @@ const Tarifas = () => {
     );
 };
 
-
 export default Tarifas;
-

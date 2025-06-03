@@ -2,10 +2,10 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import String, Boolean, DateTime, Integer, Float, Numeric, Text, Date, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from extensions import db 
+
 from datetime import datetime
 
-
+db = SQLAlchemy ()
 class User(db.Model):
     __tablename__ = 'users'
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
@@ -21,10 +21,17 @@ class User(db.Model):
     telefono: Mapped[str]= mapped_column(String(50))
     profession_type: Mapped[str]= mapped_column(String(50))
     experiencia_años: Mapped[int]= mapped_column(Integer, default=0)
-    #relaciones:
-    auth_account= relationship('AuthAccount', backref='user', uselist=False)
-    events_created= relationship('Event', backref='creator', lazy=True)
-    event_singups= relationship('EventSignup', backref='user', lazy=True)
+
+    # 🔧 RELACIONES
+    auth_account = relationship('AuthAccount', back_populates='user', uselist=False)
+    events_created = relationship('Event', back_populates='creator', lazy=True)
+    plans_created = relationship('PlanTemplate', back_populates='creator', lazy=True)
+    subscriptions = relationship('Subscription', back_populates='user', lazy=True)
+    support_tickets = relationship('SupportTicket', back_populates='user', lazy=True)
+    event_signups = relationship('EventSignup', back_populates='user', lazy=True)
+
+
+
 
 
     def serialize(self):
@@ -190,9 +197,11 @@ class Subscription(db.Model):
     status: Mapped[str] = mapped_column(String(30), nullable= False)
 
     #relaciones:
-    user = relationship('User', back_populates='subscriptions')
+    user = relationship('User', back_populates='subscriptions') 
     plan = relationship('SubscriptionPlan', back_populates='subscriptions')
     payments = relationship('Payment', back_populates='subscriptions', lazy=True)
+    payments = relationship('Payment', back_populates='subscription', lazy=True)
+
 
     def serialize(self):
         return {
@@ -240,7 +249,7 @@ class Event(db.Model):
 
     #relaciones:
     creator = relationship('User', back_populates='events_created')
-    signups = relationship('EventSingup', back_populates='event')
+    signups = relationship('EventSignup', back_populates='event')
 
     def serialize(self):
         return {
