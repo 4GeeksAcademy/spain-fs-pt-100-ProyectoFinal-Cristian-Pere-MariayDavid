@@ -267,7 +267,7 @@ def get_template_item(iid):
 
 @api.route('/template_items', methods=['POST'])
 def create_template_item():
-    data = request.json() or {}
+    data = request.json or {}
     required = ('template_id', 'item_type', 'nombre')
     if not all(f in data for f in required):
         raise APIException(f"Faltan campos obligatorios: {', '.join(required)}", status_code=400)
