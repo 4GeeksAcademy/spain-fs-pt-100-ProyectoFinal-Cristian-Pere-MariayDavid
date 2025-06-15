@@ -57,6 +57,7 @@ def create_user():
 
 
     
+    
     user = User(
         email=data['email'],
         password=hashed_password,
