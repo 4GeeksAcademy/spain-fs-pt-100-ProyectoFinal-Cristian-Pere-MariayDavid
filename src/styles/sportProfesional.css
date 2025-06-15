@@ -1,12 +1,5 @@
-body {
-  background: #213448;
-  color: #ECEFCA;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
 
-.nutricion-page {
+.sport-profesional {
   padding-top: 10px;
 }
 
@@ -20,19 +13,18 @@ body {
   background: #213448;
 }
 
-
 .logo-navbar {
   height: 90px;
   object-fit: contain;
 }
 
-.nutricion-page .npHero {
+.sport-profesional .sport-header {
   background-color: #547792;
   border-radius: 20px;
 }
 
-.npHero {
-  background-image: url("/comdia.jpg");
+.sport-header {
+  background-image: url("https://img.freepik.com/fotos-premium/varios-jovenes-amigos-haciendo-ejercicio-duro-pesas-gimnasio-enfoque-selectivo-centrarse-gyoung-womanl-primer-plano_360066-451.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,7 +38,7 @@ body {
   height: 260px;
 }
 
-.npHero::before {
+.sport-header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -57,7 +49,7 @@ body {
   z-index: 0;
 }
 
-.npHero > * {
+.sport-header > * {
   position: relative;
   z-index: 1;
 }
@@ -69,49 +61,23 @@ body {
   border-top-right-radius: 0.5rem;
 }
 
-.tarjetaNp {
-  background: #ECEFCA;
+.sport1 {
+  background: #ecefca;
 }
 
-
-.nutricion-page .tittle,
-.nutricion-page .subtittle {
+.sport-profesional .tittle,
+.sport-profesional .subtittle {
   color: white;
   font-weight: bold;
 }
 
-.nutricion-page .card-title {
+.sport-profesional .card-title {
   color: #547792;
 }
 
-
-.tarjetaNp {
-  background-color: #ECEFCA;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-
-.tarjetaNp:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-body {
-  padding: 1rem;
-}
-
-.card-title {
-  color: #5a8dee;
-  font-weight: bold;
-}
-
-.card-text {
-  color: #213448;
+.sport-profesional .list-group-item {
+  font-size: 1.1rem;
+  background-color: #f9f9f9;
 }
 
 .beneficios {
@@ -122,7 +88,7 @@ body {
 }
 
 .beneficios .subtittle {
-  color: #ECEFCA;
+  color: #ecefca;
   font-weight: bold;
 }
 
@@ -132,7 +98,20 @@ body {
   padding: 0;
 }
 
-.nutricion-page .beneficios .list-group-item {
+.caja-bot .list-group-item {
+  background-color: #f4f4f4;
+  border: none;
+  color: #213448;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+.sport-profesional .beneficios .list-group-item {
   background-color: #ECEFCA;
   color: #213448;
   border: none;
@@ -141,6 +120,3 @@ body {
   margin-bottom: 0.5rem;
   border-radius: 8px;
 }
-
-
-

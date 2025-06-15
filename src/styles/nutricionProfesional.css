@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-.nutricion-page {
+.nutricion-profesional {
   padding-top: 10px;
 }
 
@@ -26,7 +26,7 @@ body {
   object-fit: contain;
 }
 
-.nutricion-page .npHero {
+.nutricion-profesional .npHero {
   background-color: #547792;
   border-radius: 20px;
 }
@@ -74,13 +74,13 @@ body {
 }
 
 
-.nutricion-page .tittle,
-.nutricion-page .subtittle {
+.nutricion-profesional .tittle,
+.nutricion-profesional .subtittle {
   color: white;
   font-weight: bold;
 }
 
-.nutricion-page .card-title {
+.nutricion-profesional .card-title {
   color: #547792;
 }
 
@@ -132,7 +132,7 @@ body {
   padding: 0;
 }
 
-.nutricion-page .beneficios .list-group-item {
+.nutricion-profesional .beneficios .list-group-item {
   background-color: #ECEFCA;
   color: #213448;
   border: none;
@@ -141,6 +141,3 @@ body {
   margin-bottom: 0.5rem;
   border-radius: 8px;
 }
-
-
-
