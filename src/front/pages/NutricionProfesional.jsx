@@ -21,7 +21,7 @@ const crearPlanVacio = () =>
 const NutricionProfesional = () => {
   const [usuarios, setUsuarios] = useState([]);
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState(null);
-  const [plan, setPlan] = useState([]);           // sera siempre array
+  const [plan, setPlan] = useState([]);
   const [diaActivo, setDiaActivo] = useState(null);
   const [modoEdicion, setModoEdicion] = useState(false);
 
