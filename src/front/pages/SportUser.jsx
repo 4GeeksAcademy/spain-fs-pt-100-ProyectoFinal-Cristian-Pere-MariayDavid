@@ -21,7 +21,7 @@ const SportUser = () => {
     const fetchPlan = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_BACKEND_URL}api/training_entries/${userId}`,
+          `${import.meta.env.VITE_BACKEND_URL}api/user/training_entries`,
           {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),
@@ -50,7 +50,7 @@ const SportUser = () => {
     return <div className="text-center np-hero mt-5">Cargando plan de entrenamiento...</div>;
   if (error)
     return <div className="text-center text-danger mt-5">{error}</div>;
-  
+
   return (
     <div className="sport-user container mt-5">
       <section className="sport-header text-center py-5">

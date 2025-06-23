@@ -1059,6 +1059,19 @@ def list_training_entries():
     return jsonify([e.serialize() for e in entries]), 200
 
 
+@api.route('/user/training_entries', methods=['GET'])
+@jwt_required()
+def get_my_training_entries():
+    user_id = get_jwt_identity()
+    
+    TrainingEntries = TrainingEntry.query.filter_by(
+        user_id=user_id,
+    ).all()
+    if not TrainingEntries:
+        return jsonify({"error": "No se encuentra el plan entrenamiento para este usuario"}), 404
+    TrainingEntries_serialized = [entry.serialize() for entry in TrainingEntries]
+    return jsonify(TrainingEntries_serialized), 200
+
 @api.route('/training_entries/<int:user_id>', methods=['GET'])
 @jwt_required()
 def get_training_entry(user_id):
