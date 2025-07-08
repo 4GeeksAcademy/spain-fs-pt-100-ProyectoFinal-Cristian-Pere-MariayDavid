@@ -1,98 +1,122 @@
-D – M – P – C
+💪 D – M – P – C
+D – Discipline: La base de todo cambio. Sin disciplina, no hay resultados.
+M – Muscles: Para los que buscan transformar su físico.
+P – Progress: Cada día cuenta. Cada repetición suma.
+C – Consistency: El verdadero secreto del éxito: constancia día tras día.
 
-D – Discipline La base de todo cambio. Sin disciplina, no hay resultados.
-M – Muscles Si queréis un enfoque más físico.
-P – Progress Mejora constante. Cada día cuenta, cada repetición suma.
-C – Consistency El secreto real del éxito: constancia día tras día.
+🧠 ¿Qué es D – M – P – C?
+D – M – P – C es una plataforma web creada para ayudarte a mejorar tu salud de forma integral, combinando nutrición personalizada, rutinas de entrenamiento, seguimiento de progreso y contenido educativo.
 
+Desarrollada con React.js en el frontend y Flask en el backend, la aplicación guía a los usuarios en su camino hacia un estilo de vida más saludable.
 
+🚀 Funcionalidades principales
+Registro e inicio de sesión de usuarios.
 
-Aplicacin web desarrollada con **React.js** en el front end y **Flask** en el back end, diseñada para
-ayudar a los usuarios a alcanzar sus objetivos de salud mediante un plan personalizado de nutricin
-y entrenamiento.
+Perfil personalizado con datos como IMC, objetivos y evolución.
 
-Descripcin del Proyecto
-D – M – P – C es una plataforma web que ofrece planes de nutricion, rutinas de entrenamiento,
-seguimiento de progreso y contenido educativo para quienes desean mejorar su estilo de vida de
-manera integral. Cuenta con:
-- Registro e inicio de sesion de usuarios.
-- Perfil personalizado con IMC, objetivos y progreso.
-- Sugerencias de ejercicios diarios basados en requerimientos calricos.
-- Rutinas de ejercicios divididas por niveles y objetivos (ganancia muscular, prdida de grasa, etc.).
-- Blog con artculos y consejos sobre salud, entrenamiento y alimentacin.
-- 
-Tecnologas utilizadas
-Front-End
-- Html
-- Css
-- React.js
-- Bootstrap
-- Context API
-  
-Back-End
-- Python
-- Flask
-- SQLAlchemy
-- JWT
-  
-Base de Datos
-- SqlAlchemy
-  
-Herramientas DevOps
-- Pipenv
-- .env para configuracin
-- Render para despliegue
-Instalacin del proyecto
+Sugerencias de ejercicios diarios según tu requerimiento calórico.
+
+Rutinas organizadas por niveles y objetivos (ganancia muscular, pérdida de grasa, etc.).
+
+Blog con artículos y consejos sobre entrenamiento, salud y alimentación.
+
+🛠 Tecnologías utilizadas
+🔹 Front-End
+HTML, CSS
+
+React.js
+
+Bootstrap
+
+Context API
+
+🔹 Back-End
+Python
+
+Flask
+
+SQLAlchemy
+
+Autenticación con JWT
+
+🔹 Base de Datos
+PostgreSQL (mediante SQLAlchemy)
+
+🔹 DevOps y despliegue
+Pipenv
+
+Variables de entorno con .env
+
+Despliegue en Render
+
+⚙️ Instalación del proyecto
 Backend
-1. Clona el repositorio:
- git clone https://github.com/tu-usuario/fitlife-app.git
- cd fitlife-app
-2. Instala dependencias de Python:
- pipenv install
-3. Copia el archivo de configuracin:
- cp .env.example .env
-4. Configura la variable `DATABASE_URL` en `.env`:
- DATABASE_URL=postgres://username:password@localhost:5432/fitlife_db
-5. Realiza y aplica migraciones:
- pipenv run migrate
- pipenv run upgrade
-6. Inicia el servidor Flask:
- pipenv run start
+bash
+Copiar
+Editar
+git clone https://github.com/tu-usuario/fitlife-app.git
+cd fitlife-app
+pipenv install
+cp .env.example .env
+Configura tu base de datos en .env:
+
+bash
+Copiar
+Editar
+DATABASE_URL=postgres://usuario:contraseña@localhost:5432/fitlife_db
+Aplica las migraciones:
+
+bash
+Copiar
+Editar
+pipenv run migrate
+pipenv run upgrade
+pipenv run start
 Frontend
-1. Entra en la carpeta `frontend`:
- cd frontend
-2. Instala dependencias:
- npm install
-3. Ejecuta el servidor de desarrollo:
- npm run start
-Poblacin de datos de prueba
-Puedes insertar usuarios y datos de ejemplo con el siguiente comando:
+bash
+Copiar
+Editar
+cd frontend
+npm install
+npm run start
+Datos de prueba
+Puedes cargar datos de ejemplo con:
+
+bash
+Copiar
+Editar
 pipenv run insert-test-users
-Despliegue
-Este proyecto est listo para desplegarse en [Render.com](https://render.com). Consulta la
-[documentacin de despliegue de
-4Geeks](https://4geeks.com/es/docs/start/despliega-con-render-com) para ms detalles.
-Estructura del Proyecto
+
+🗂 Estructura del Proyecto
+bash
+Copiar
+Editar
 /fitlife-app
- /frontend # Aplicacin React
- /src
- /api
- /routes # Endpoints Flask
- /models # Modelos SQLAlchemy
- /utils # Funciones de utilidad
- .env # Variables de entorno
- commands.py # Poblacin de datos
- README.md
-Autores
-- David Vivar 
-              . Linkedin = https://www.linkedin.com/in/david-vivar-martinez-3b2470156/
-              . GitHub = https://github.com/DaivdVivar
-- Maria Fernanda Galvis
-              . Linkedin =
-              . GitHub =
-- Pere Pau carrasco
-              . Linkedin =
-              . GitHub =
-- Cristian Cerezo
-              . Linkedin =
-              . GitHub =
+│
+├── /frontend         # Aplicación React
+│   └── /src
+│
+├── /api
+├── /routes           # Endpoints Flask
+├── /models           # Modelos SQLAlchemy
+├── /utils            # Funciones auxiliares
+│
+├── .env              # Variables de entorno
+├── commands.py       # Población de datos
+└── README.md
+
+
+
+👥 Autores
+David Vivar
+https://www.linkedin.com/in/david-vivar-martinez/ | https://github.com/DavidVivarMartinez
+
+Maria Fernanda Galvis
+LinkedIn | GitHub
+
+Pere Pau Carrasco
+LinkedIn | GitHub
+
+Cristian Cerezo
+LinkedIn | GitHub
+
